@@ -1,57 +1,54 @@
 import type { CampsiteConfig } from "../types";
 
 /**
- * Krenn Camping-Stellplatz — Wohnmobil-/Camperstellplatz an der B25 mitten in Göstling an der Ybbs
- * (Mostviertel, Niederösterreich). Inhalte zu 100 % aus raw/digest abgeleitet.
- * BILDERARM: Der Platz stellt nur eine eigene Drohnenaufnahme in zwei Ausschnitten + ein Logo bereit
- * (der Rest der Library ist Lageplan/Logo-Karten/360°-Video-Thumbnail mit Text — bewusst nicht verwendet).
- * Darum tragen die beiden echten Platzfotos die zwei großen Vollbild-Momente (Hero + Atempause);
- * Pillars/Camping-Bento/Galerie blenden sich ehrlich aus, die Ausstattung lebt in USPs, Trust & Booking.
+ * Krenn Camping-Stellplatz · Göstling an der Ybbs (Mostviertel · Niederösterreich)
+ * Kleiner, ganzjährig geöffneter Stellplatz an der B25, Platz für ca. 20 Fahrzeuge,
+ * 500 m zum Ortszentrum/Solebad/Radweg. Quelle: camping-stellplatz.at.
+ * Bildlage ehrlich dünn: nur EINE eigene Drohnen-Aufnahme in zwei Zuschnitten →
+ * bewusst schlanke Eine-Seite (Hero + Atempause), Karten-/Galerie-Sektionen blenden sich aus.
  */
 const IMG = "/campsites/camping-stellplatz";
 
-const krenn: CampsiteConfig = {
+const campingStellplatz: CampsiteConfig = {
   name: "Krenn Camping-Stellplatz",
   shortName: "Krenn",
   slug: "camping-stellplatz",
   ort: "Göstling an der Ybbs",
   region: "Mostviertel",
-  brandKind: "Camping-Stellplatz",
-  regionLong: "Mostviertel · Niederösterreich · Österreich",
-
   heroVariant: "center",
+  brandKind: "Camping-Stellplatz",
+  regionLong: "Ybbstaler Alpen · Mostviertel · Niederösterreich",
 
-  claim: "Mit dem Wohnmobil mitten in Göstling ankommen",
-  claimEmphasis: "mitten in Göstling",
-  emailDetail: "eure zentrale Lage nur 500 m vom Ybbstaler Solebad",
+  claim: "Ganzjährig zu Gast in den Ybbstaler Alpen",
+  claimEmphasis: "Ybbstaler Alpen",
+  emailDetail: "eure ganzjährig geöffnete Lage direkt an der B25",
   intro:
-    "Ebener Wohnmobil-Stellplatz direkt an der B25 in Göstling: Platz für rund 20 Fahrzeuge, ganzjährig geöffnet — und von hier sind es nur 500 Meter ins Ortszentrum, zum Solebad und an den Ybbstalradweg.",
+    "Direkt an der B25 in Göstling an der Ybbs, ganzjährig geöffnet und Platz für rund 20 Fahrzeuge — Ortszentrum, Solebad und Radweg liegen alle keine 500 Meter entfernt.",
 
-  logo: { src: `${IMG}/logo-58061c8fb0.webp`, alt: "Krenn Camping-Stellplatz Logo" },
+  logo: { src: `${IMG}/amenity-58061c8fb0.webp`, alt: "Krenn Camping-Stellplatz Logo" },
 
   statement: {
-    text: "Vom Stellplatz sind es nur fünf Minuten zu Fuß ins Ortszentrum, ins Solebad und an den Ybbstalradweg.",
+    text: "Mitten in Göstling an der Ybbs — und in fünf Minuten zu Fuß bei allem, was du brauchst.",
     emphasis: "fünf Minuten zu Fuß",
   },
 
-  // Bewusst leer: nur eine echte Drohnenaufnahme verfügbar — kein Block aus drei verschiedenen,
-  // motivtreuen Fotos möglich. BrandStatement blendet sich damit ehrlich aus (statt zu wiederholen).
+  // Keine eigenen Motive für Foto-Kacheln vorhanden → Pillar-Block blendet sich aus (ehrlich).
   pillars: [],
 
   usps: [
-    "Strom, Wasser & WLAN",
-    "Sanitär & Aufenthaltsraum",
-    "Ver- & Entsorgung am Platz",
     "Ganzjährig geöffnet",
-    "Hunde erlaubt",
-    "Platz für rund 20 Fahrzeuge",
+    "Platz für ~20 Fahrzeuge",
+    "Strom & Frischwasser",
+    "Sanitär & Küche",
+    "WLAN am Platz",
+    "Hunde willkommen",
   ],
 
   trust: {
-    heading: "Kurze Wege, viel Programm",
-    headingEmphasis: "Kurze Wege",
+    heading: "Alles Wichtige in 500 Metern",
+    headingEmphasis: "500 Metern",
     intro:
-      "Mitten in Göstling und doch ruhig: Vom Stellplatz erreichst du Geschäfte, Gasthäuser, Solebad und Radweg in wenigen Minuten — und ringsum warten die Ybbstaler Alpen mit Wandern, Skifahren und Ausflugszielen.",
+      "Ortszentrum, Lebensmittel, Tankstelle, das Ybbstaler Solebad und der Anschluss an den Ybbstalradweg — in Göstling erreichst du alles zu Fuß. Ringsum warten die Ybbstaler Alpen.",
   },
 
   awards: [],
@@ -59,62 +56,65 @@ const krenn: CampsiteConfig = {
   saison: { von: "Jänner", bis: "Dezember" },
 
   hero: {
-    aerial: { src: `${IMG}/hero-0f32cb3952.webp`, alt: "Luftaufnahme des Krenn Camping-Stellplatzes in Göstling an der Ybbs" },
+    aerial: {
+      src: `${IMG}/amenity-0f32cb3952.webp`,
+      alt: "Luftaufnahme des Krenn Camping-Stellplatz in Göstling an der Ybbs",
+    },
   },
 
+  // Eine ruhige Full-Bleed-Atempause mit dem zweiten, schräg aufgenommenen Drohnenbild.
   breather: {
-    image: { src: `${IMG}/breather-78eff67fe3.webp`, alt: "Wohnmobile und Campingbusse auf dem Krenn Camping-Stellplatz in Göstling" },
-    line: "Mitten in Göstling, ringsum die Ybbstaler Alpen.",
+    image: {
+      src: `${IMG}/amenity-079383ae70.webp`,
+      alt: "Stellplatz mit Wohnmobilen, Aufenthaltsraum und Solar-Carport in Göstling",
+    },
+    line: "Mitten im Ort — und ringsum die Berge.",
   },
 
-  // Bilderarm: kein motivtreues Foto je Ausstattungs-Kachel vorhanden — das Bento-Grid würde mit
-  // einem Einzelbild unausgewogen wirken. Die Ausstattung steht ehrlich in USPs, Trust & Booking;
-  // die Sektion blendet sich aus (leeres features-Array).
+  // Keine eigenen Ausstattungs-Fotos → Foto-Kacheln entfallen, Infos stehen in den Chips & Preisen.
   camping: {
-    heading: "Voll ausgestattet mitten im Ort",
-    intro:
-      "Ebene Stellplätze mit Strom- und Frischwasseranschluss, Sanitäranlage, WLAN und ein Aufenthaltsraum mit Küche — dazu Entsorgung für Toilettenkassette, Abwasser und Müll. Der ganze Platz ist umzäunt.",
+    heading: "Ausstattung am Platz",
+    intro: "Alles, was ein unkomplizierter Stopp braucht.",
     features: [],
   },
 
   anreise: {
-    heading: "Dein Weg nach Göstling",
+    heading: "Anfahrt über die B25",
     modes: [
       {
-        title: "Mit dem Auto",
-        text: "Über die B25 nach Göstling — die Zufahrt liegt zwischen Unimarkt und Autohaus Rottner, dann sofort links Richtung Dachdeckerei Leichtfried.",
+        title: "Mit Wohnmobil & Auto",
+        text: "Über die B25 nach Göstling — zwischen Unimarkt und Autohaus Rottner links Richtung Dachdeckerei Leichtfried, der Platz ist bereits sichtbar.",
       },
       {
-        title: "Alles fußläufig",
-        text: "Ortszentrum, Lebensmittelgeschäft, Drogeriemarkt und Tankstelle erreichst du in rund 500 Metern — alles bequem zu Fuß.",
+        title: "Von der A1 Westautobahn",
+        text: "Bei Ybbs an der Donau auf die B25 Richtung Göstling wechseln — die Strecke ist durchgehend beschildert.",
       },
       {
-        title: "Bahn & Bus",
-        text: "Mit der Bahn bis Waidhofen an der Ybbs, von dort weiter per Bus ins rund 25 Kilometer entfernte Göstling.",
+        title: "Mit der Bahn",
+        text: "Nächster Bahnhof ist Waidhofen an der Ybbs, von dort rund 30 Minuten weiter mit Bus oder Taxi.",
       },
     ],
   },
 
-  // Bilderarm: weniger als vier eigenständige Aufnahmen — das Galerie-Bento blendet sich aus.
+  // Galerie braucht 4 eigene Motive — die gibt der Platz nicht her → Sektion blendet sich aus.
   galerie: {
-    heading: "Göstling in Bildern",
-    headingEmphasis: "Bildern",
-    intro: "Eindrücke vom Stellplatz und aus Göstling.",
-    tag: "Sommer & Winter",
+    heading: "Eindrücke",
+    headingEmphasis: "Eindrücke",
+    intro: "Ein paar Aufnahmen vom Platz in Göstling.",
+    tag: "Göstling an der Ybbs",
     images: [],
   },
 
   booking: {
     heading: "Sichere dir deinen Platz in Göstling",
-    headingEmphasis: "deinen Platz",
-    intro:
-      "Sag uns deinen Zeitraum und dein Fahrzeug — Familie Krenn meldet sich persönlich und reserviert deinen Stellplatz.",
+    headingEmphasis: "in Göstling",
+    intro: "Wähle Anreise, Abreise und Personen — wir melden uns persönlich mit deiner Verfügbarkeit zurück.",
     pricesArePlaceholder: false,
     priceNote:
-      "Richtpreis inkl. Platzgebühr + 2 Personen (ab 15 J.) · je weitere Person € 8, Kinder 5–15 J. € 5, Hund € 3, Strompauschale € 4/Nacht · zzgl. Ortstaxe.",
+      "Richtpreise für 2 Erwachsene/Nacht inkl. Platzgebühr — jede weitere Person € 8, Kinder (5–15 J.) € 5; Strom € 4 pauschal und Ortstaxe kommen hinzu.",
     highlight: {
-      title: "Alles fußläufig",
-      text: "Ortszentrum, Solebad, Geschäfte und Radweg liegen rund 500 Meter vom Platz entfernt.",
+      title: "Ganzjährig geöffnet",
+      text: "Auch im Winter erreichbar — ein praktischer Stützpunkt für Hochkar, Ötscher & Co.",
     },
     categories: [
       { id: "wohnmobil", label: "Wohnmobil", perNight: 25, perExtraGuest: 8 },
@@ -128,17 +128,16 @@ const krenn: CampsiteConfig = {
     telHref: "tel:+436645361519",
     mail: "info@camping-stellplatz.at",
     adresse: "Stixenlehen 181 · 3345 Göstling an der Ybbs · Niederösterreich",
-    coords: { lat: 47.806904, lng: 14.940600 },
+    coords: { lat: 47.806904, lng: 14.9406 },
   },
 
   languages: ["DE"],
 
   nav: [
-    { label: "Stellplatz", href: "#top" },
-    { label: "Lage", href: "#anreise" },
+    { label: "Willkommen", href: "#top" },
+    { label: "Lage & Anreise", href: "#anreise" },
     { label: "Preise", href: "#booking" },
-    { label: "Kontakt", href: "#anreise" },
   ],
 };
 
-export default krenn;
+export default campingStellplatz;
